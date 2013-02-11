@@ -28,13 +28,27 @@ on boot
 	chmod 0666 /dev/pvrsrvkm
 
 on fs
-	mount_all /fstab.omap4pandaboard
+#	symlink /dev/block/platform /dev/block/platform/omap
+	mount ext4 /dev/block/platform/omap_hsmmc.0/by-name/system /system wait ro
+	mount ext4 /dev/block/platform/omap_hsmmc.0/by-name/userdata /data wait noatime nosuid nodev nomblk_io_submit
+#	mount ext4 /dev/block/platform/omap/omap_hsmmc.0/by-name/cache /cache wait noatime nosuid nodev nomblk_io_submit
+#	mount ext4 /dev/block/platform/omap/omap_hsmmc.0/by-name/efs /factory wait ro
+
+#	mount ext4 /dev/mmcblk0p5 /system wait ro
+#	mount ext4 /dev/mmcblk0p6 /data wait noatime nosuid nodev nomblk_io_submit
+#	mount ext4 /dev/mmcblk0p7 /cache wait noatime nosuid nodev nomblk_io_submit
+
+
+#	mount_all /fstab.omap4pandaboard
 
 # change permissions for Bluetooth/FM/GPS
 	chmod 0600 /sys/class/rfkill/rfkill0/state
 	chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
 	chmod 0600 /dev/ttyO1
 	chown bluetooth bluetooth /dev/ttyO1
+
+# change permissions for ION driver
+    chmod 0777 /dev/ion
 
 
 # take a wakelock on boot until PM is working

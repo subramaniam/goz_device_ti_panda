@@ -14,4 +14,10 @@
 # limitations under the License.
 #
 
+# define OMAP_ENHANCEMENT variables
+include device/ti/blaze/Config.mk
+
 PRODUCT_MAKEFILES := $(LOCAL_DIR)/full_panda.mk
+
+# clear OMAP_ENHANCEMENT variables
+$(call ti-clear-vars)
