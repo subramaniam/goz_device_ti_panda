@@ -14,6 +14,14 @@
 # limitations under the License.
 #
 
+ENHANCED_DOMX := true
+OMAP_ENHANCEMENT := true
+OMAP_ENHANCEMENT_MULTIGPU := true
+#OMAP_ENHANCEMENT_BURST_CAPTURE := true
+#OMAP_ENHANCEMENT_S3D := true
+#OMAP_ENHANCEMENT_CPCAM := true
+#OMAP_ENHANCEMENT_VTC := true
+
 # These two variables are set first, so they can be overridden
 # by BoardConfigVendor.mk
 BOARD_USES_GENERIC_AUDIO := false
@@ -72,3 +80,4 @@ BOARD_WLAN_DEVICE                := wl12xx_mac80211
 #TARGET_PROVIDES_INIT_RC := true
 #TARGET_USERIMAGES_SPARSE_EXT_DISABLED := true
 
+include device/ti/common-open/BoardConfig.mk

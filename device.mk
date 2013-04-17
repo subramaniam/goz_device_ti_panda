@@ -81,6 +81,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.sf.lcd_density=160
 
+PRODUCT_PROPERTY_OVERRIDES += \
+	com.ti.omap_enhancement=true
+
 $(call inherit-product-if-exists, vendor/ti/panda/device-vendor.mk)
 $(call inherit-product, frameworks/native/build/tablet-dalvik-heap.mk)
 $(call inherit-product, hardware/ti/omap4xxx/omap4.mk)
