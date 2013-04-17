@@ -43,17 +43,13 @@ PRODUCT_PROPERTY_OVERRIDES := \
 PRODUCT_CHARACTERISTICS := tablet,nosdcard
 
 DEVICE_PACKAGE_OVERLAYS := \
-    device/ti/panda/overlay
+	device/ti/panda/overlay
 
 #HWC Hal
 PRODUCT_PACKAGES += \
-    hwcomposer.omap4
+	hwcomposer.omap4
 
 PRODUCT_TAGS += dalvik.gc.type-precise
-
-PRODUCT_PACKAGES += \
-	librs_jni \
-	com.android.future.usb.accessory
 
 # Audio
 PRODUCT_PACKAGES += \
