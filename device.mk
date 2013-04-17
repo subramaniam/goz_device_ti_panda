@@ -68,11 +68,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	setup_fs
 
-# BlueZ test tools
-PRODUCT_PACKAGES += \
-	hciconfig \
-	hcitool
-
 PRODUCT_PACKAGES += send_bug
 PRODUCT_COPY_FILES += \
 	system/extras/bugmailer/bugmailer.sh:system/bin/bugmailer.sh \
