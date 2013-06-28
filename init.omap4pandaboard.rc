@@ -42,6 +42,9 @@ on boot
 	chmod 0666 /dev/tiler
 	chmod 0666 /dev/dmm
 
+# change permissions for ION driver
+    chmod 0777 /dev/ion
+
 # cpufreq interactive governor: timer 20ms, min sample 20ms, hispeed 800MHz
 	write /sys/devices/system/cpu/cpufreq/interactive/timer_rate 20000
 	write /sys/devices/system/cpu/cpufreq/interactive/min_sample_time 20000
